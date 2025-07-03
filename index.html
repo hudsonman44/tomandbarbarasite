@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 50th Anniversary Tom & Barbara!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/FFF8E1/333333?text=Tom+%26+Barbara');
+            background-size: cover;
+            background-position: center;
+        }
+        .modal-backdrop {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-amber-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-amber-800">T & B</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#story" class="hover:text-amber-600">Our Story</a>
+                <a href="#event" class="hover:text-amber-600">Event & RSVP</a>
+                <a href="#videos" class="hover:text-amber-600">Video Tributes</a>
+            </div>
+            <button id="auth-button" class="bg-amber-600 text-white px-4 py-2 rounded-full hover:bg-amber-700 transition duration-300">
+                Login / Sign Up
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg h-[60vh] md:h-[80vh] flex items-center justify-center text-white text-center relative">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 p-6">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold">Celebrating 50 Years</h1>
+                <p class="text-2xl md:text-4xl mt-4">Tom & Barbara</p>
+                <p class="mt-2 text-lg">1975 - 2025</p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="story" class="py-20 px-6">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h2 class="text-4xl font-bold text-amber-900">A Love for the Ages</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 mb-8"></div>
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <img src="https://placehold.co/400x500/E0A82E/FFFFFF?text=Then" alt="Tom and Barbara, 50 years ago" class="w-full md:w-1/2 rounded-lg shadow-xl">
+                    <p class="text-left text-lg leading-relaxed">
+                        From a chance meeting to a lifetime of love, Tom and Barbara's journey is one for the storybooks. For five decades, they have built a life founded on love, laughter, and unwavering support. They've navigated life's challenges hand-in-hand and celebrated its joys with open hearts. Join us as we honor their incredible milestone and the beautiful family they've created.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event & RSVP Section -->
+        <section id="event" class="bg-white py-20 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold text-amber-900">The Celebration</h2>
+                <p class="mt-4 text-lg max-w-2xl mx-auto">We would be honored to have you join us as we celebrate this momentous occasion.</p>
+                <div class="mt-12 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-amber-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold">Date & Time</h3>
+                        <p class="mt-2 text-lg">Saturday, October 18, 2025</p>
+                        <p>5:00 PM - 10:00 PM</p>
+                    </div>
+                    <div class="bg-amber-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold">Location</h3>
+                        <p class="mt-2 text-lg">The Grand Ballroom</p>
+                        <p>123 Celebration Ave, Happytown</p>
+                    </div>
+                    <div class="bg-amber-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold">Dress Code</h3>
+                        <p class="mt-2 text-lg">Formal Attire</p>
+                        <p>Gold accents encouraged!</p>
+                    </div>
+                </div>
+                <button id="rsvp-button" class="mt-12 bg-amber-600 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-amber-700 transition duration-300 shadow-lg">
+                    Register to Attend
+                </button>
+            </div>
+        </section>
+
+        <!-- Video Tributes Section -->
+        <section id="videos" class="py-20 px-6">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h2 class="text-4xl font-bold text-amber-900">Share a Memory</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 mb-8"></div>
+                <p class="text-lg leading-relaxed mb-8">
+                    Can't make it or want to share a special message? We're compiling a surprise video montage filled with love and memories for Tom and Barbara. Please submit a short video clip sharing a favorite memory, a funny story, or your well wishes for the happy couple.
+                </p>
+                <button id="submit-video-button" class="bg-white border-2 border-amber-600 text-amber-800 px-8 py-3 rounded-full text-lg font-bold hover:bg-amber-50 transition duration-300 shadow-lg">
+                    Submit Your Video
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-amber-100 py-8 px-6 text-center">
+        <p>&copy; 2025 The Family of Tom & Barbara. All Rights Reserved.</p>
+        <p class="text-sm mt-2">Made with love for a love that lasts.</p>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 modal-backdrop opacity-0 pointer-events-none">
+        <div id="auth-modal-content" class="bg-white rounded-lg shadow-2xl w-full max-w-md p-8 relative transform scale-95 transition-transform duration-300">
+            <!-- Close Button -->
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <!-- Tabs -->
+            <div class="flex border-b mb-6">
+                <button id="login-tab" class="flex-1 py-2 text-lg font-bold border-b-4 border-amber-600 text-amber-800">Login</button>
+                <button id="signup-tab" class="flex-1 py-2 text-lg font-bold border-b-2 border-transparent text-gray-500">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-6">
+                <div>
+                    <label for="login-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="login-email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                </div>
+                <div>
+                    <label for="login-password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="login-password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                </div>
+                <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-md text-lg font-bold hover:bg-amber-700 transition duration-300">Login</button>
+            </form>
+
+            <!-- Signup Form (Hidden by default) -->
+            <form id="signup-form" class="space-y-6 hidden">
+                <div>
+                    <label for="signup-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="signup-name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                </div>
+                <div>
+                    <label for="signup-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="signup-email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                </div>
+                <div>
+                    <label for="signup-password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="signup-password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                </div>
+                <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-md text-lg font-bold hover:bg-amber-700 transition duration-300">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Modal Elements ---
+            const authModal = document.getElementById('auth-modal');
+            const authModalContent = document.getElementById('auth-modal-content');
+            const closeModalButton = document.getElementById('close-modal-button');
+            
+            // --- Buttons to open modal ---
+            const authButton = document.getElementById('auth-button');
+            const rsvpButton = document.getElementById('rsvp-button');
+            const submitVideoButton = document.getElementById('submit-video-button');
+            
+            // --- Tab Elements ---
+            const loginTab = document.getElementById('login-tab');
+            const signupTab = document.getElementById('signup-tab');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+
+            // --- State (for frontend simulation) ---
+            let isAuthenticated = false; 
+
+            // --- Functions ---
+            const openModal = () => {
+                authModal.classList.remove('opacity-0', 'pointer-events-none');
+                authModalContent.classList.remove('scale-95');
+            };
+
+            const closeModal = () => {
+                authModalContent.classList.add('scale-95');
+                authModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    authModal.classList.add('pointer-events-none');
+                }, 300); // Wait for transition to finish
+            };
+            
+            const switchToLoginTab = () => {
+                signupTab.classList.remove('border-amber-600', 'text-amber-800');
+                signupTab.classList.add('border-transparent', 'text-gray-500');
+                loginTab.classList.add('border-amber-600', 'text-amber-800');
+                loginTab.classList.remove('border-transparent', 'text-gray-500');
+                signupForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+            };
+
+            const switchToSignupTab = () => {
+                loginTab.classList.remove('border-amber-600', 'text-amber-800');
+                loginTab.classList.add('border-transparent', 'text-gray-500');
+                signupTab.classList.add('border-amber-600', 'text-amber-800');
+                signupTab.classList.remove('border-transparent', 'text-gray-500');
+                loginForm.classList.add('hidden');
+                signupForm.classList.remove('hidden');
+            };
+
+            // --- Event Listeners ---
+            [authButton, rsvpButton, submitVideoButton].forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // In a real app, you'd check auth status. For now, we just open the modal.
+                    if (isAuthenticated) {
+                        // This is where you would redirect to the actual registration or video page.
+                        alert('You are logged in! Redirecting...');
+                    } else {
+                        openModal();
+                    }
+                });
+            });
+
+            closeModalButton.addEventListener('click', closeModal);
+            authModal.addEventListener('click', (e) => {
+                // Close modal if backdrop is clicked
+                if (e.target === authModal) {
+                    closeModal();
+                }
+            });
+
+            loginTab.addEventListener('click', switchToLoginTab);
+            signupTab.addEventListener('click', switchToSignupTab);
+            
+            // --- Form Submission (Simulation) ---
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Simulate a successful login
+                alert('Login successful! (Simulation)');
+                isAuthenticated = true;
+                closeModal();
+                // You could update the UI here, e.g., change "Login" button to "My Account"
+                authButton.textContent = 'My Account';
+            });
+            
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Simulate a successful signup
+                alert('Account created! Please log in. (Simulation)');
+                switchToLoginTab();
+            });
+        });
+    </script>
+
+</body>
+</html>

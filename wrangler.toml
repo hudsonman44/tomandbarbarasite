@@ -1,0 +1,9 @@
+# Top-level configuration
+name = &quot;tom-and-barbara-anniversary&quot; # The name of your worker
+main = &quot;src/index.js&quot;               # The entry point for your worker script
+compatibility_date = &quot;2024-07-25&quot;     # Sets the runtime version for compatibility
+
+# Serve static assets from the 'public' directory
+
+[[site]]
+bucket = "./public"
