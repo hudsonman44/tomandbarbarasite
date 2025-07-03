@@ -1,12 +1,12 @@
 {
-  &quot;name&quot;: &quot;tom-and-barbara-anniversary&quot;,
-  &quot;version&quot;: &quot;1.0.0&quot;,
-  &quot;private&quot;: true,
-  &quot;scripts&quot;: {
-    &quot;deploy&quot;: &quot;wrangler deploy&quot;,
-    &quot;start&quot;: &quot;wrangler dev&quot;
+  "name": "tom-and-barbara-anniversary",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "start": "wrangler dev"
   },
-  &quot;devDependencies&quot;: {
-    &quot;wrangler&quot;: &quot;^3.0.0&quot;
+  "devDependencies": {
+    "wrangler": "^3.60.0"
   }
 }
