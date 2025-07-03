@@ -1,5 +1,5 @@
 # Top-level configuration
-name = "tom-and-barbara-anniversary"
+name = 'anniversery-site'
 main = "src/index.js"
 compatibility_date = "2024-07-03"
 
